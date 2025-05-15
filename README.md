@@ -6,10 +6,10 @@ A CLI tool to generate Markdown documentation from [Commander.js](https://github
 
 <CodeGroup>
 ```bash bun
-bun add -g commander-doc
+bun a -g commander-doc
 ```
 ```bash npm
-npm install -g commander-doc
+npm i -g commander-doc
 ```
 </CodeGroup>
 

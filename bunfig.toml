@@ -1,9 +1,0 @@
-[build]
-entrypoint = "./index.ts"
-outdir = "./dist"
-minify = true
-target = "node"
-sourcemap = "external"
-
-[build.env]
-NODE_ENV = "production"
