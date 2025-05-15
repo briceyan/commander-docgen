@@ -1,11 +1,11 @@
-# commander-doc
+# commanderjs-doc
 
 A CLI tool to generate Markdown documentation from [Commander.js](https://github.com/tj/commander.js) programs.
 
 ## Installation
 
 ```bash
-bun a -g commander-doc
+bun a -g commanderjs-doc
 ```
 
 ## Usage
