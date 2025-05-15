@@ -1,15 +1,60 @@
-# gen-manual
+# commander-doc
 
-To install dependencies:
+A CLI tool to generate Markdown documentation from [Commander.js](https://github.com/tj/commander.js) programs.
+
+## Installation
+
+<CodeGroup>
+```bash bun
+bun add -g commander-doc
+```
+```bash npm
+npm install -g commander-doc
+```
+</CodeGroup>
+
+## Usage
 
 ```bash
-bun install
+cmddoc --entry ./path/to/your/cli.js --out MANUAL.md
 ```
 
-To run:
+### Options
+
+- `--entry <path>` - Path to module exporting a Commander `program` (required)
+- `--out <path>` - Output file path (default: MANUAL.md)
+- `--max-depth <n>` - Maximum subcommand depth to document
+
+## Example
+
+For a Commander.js program like:
+
+```javascript
+import { Command } from "commander";
+
+const program = new Command()
+  .name("mycli")
+  .description("A sample CLI program")
+  .version("1.0.0")
+  .option("-d, --debug", "enable debugging")
+  .option("-p, --port <number>", "port number", "80");
+
+program
+  .command("serve")
+  .description("Start the server")
+  .action(() => console.log("Starting server..."));
+
+export { program };
+```
+
+Running:
 
 ```bash
-bun run index.ts
+cmddoc --entry ./mycli.js
 ```
 
-This project was created using `bun init` in bun v1.2.11. [Bun](https://bun.sh) is a fast all-in-one JavaScript runtime.
+Will generate a Markdown file with complete documentation for your CLI.
+
+## License
+
+MIT
