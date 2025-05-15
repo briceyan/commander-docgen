@@ -1,0 +1,23 @@
+{
+  "name": "commander-doc",
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "bin": {
+    "cmddoc": "./dist/index.js"
+  },
+  "scripts": {
+    "build": "bun build index.ts --target node --outdir dist",
+    "clean": "rm -rf dist"
+  },
+  "type": "module",
+  "devDependencies": {
+    "@types/bun": "latest",
+    "commander": "^11.1.0"
+  },
+  "peerDependencies": {
+    "typescript": "^5"
+  }
+}
