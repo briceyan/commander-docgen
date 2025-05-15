@@ -1,0 +1,19 @@
+[build]
+# Entry point for your application
+entrypoints = ["./src/index.ts"]
+
+# Output directory for built files
+outdir = "./dist"
+
+# Enable minification
+minify = true
+
+# Target environment
+target = "browser"
+
+# Generate source maps
+sourcemap = "external"
+
+# Define environment variables for build
+[build.env]
+NODE_ENV = "production"
