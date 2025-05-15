@@ -1,8 +1,9 @@
-#!/usr/bin/env node
+#!/usr/bin/env bun
 
 import { Command } from "commander";
 import fs from "fs";
 import path from "path";
+import { version } from "./package.json";
 
 function genInstallSection(pkgPath: string, level = 2, title?: string): string {
   const pkg = JSON.parse(fs.readFileSync(pkgPath, "utf8"));
@@ -44,9 +45,11 @@ function genUsageSection(cmd: Command, { maxDepth = Infinity }: { maxDepth?: num
 const cli = new Command()
   .name("cmddoc")
   .description("Generate Markdown docs from a commander.js program")
+  .showHelpAfterError(true)
   .requiredOption("--entry <path>", "Path to module exporting `program`")
   .option("--out <path>", "Output file path", "MANUAL.md")
-  .option("--max-depth <n>", "Max subcommand depth", parseInt);
+  .option("--max-depth <n>", "Max subcommand depth", parseInt)
+  .version(version);
 
 async function main() {
   cli.parse();

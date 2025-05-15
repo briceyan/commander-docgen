@@ -4,20 +4,22 @@ A CLI tool to generate Markdown documentation from [Commander.js](https://github
 
 ## Installation
 
-<CodeGroup>
-```bash bun
+```bash
 bun a -g commander-doc
 ```
-```bash npm
-npm i -g commander-doc
-```
-</CodeGroup>
 
 ## Usage
 
 ```bash
 cmddoc --entry ./path/to/your/cli.js --out MANUAL.md
 ```
+
+Or run it directly without installing:
+
+```bash
+bunx cmddoc --entry ./path/to/your/cli.js --out MANUAL.md
+```
+
 
 ### Options
 
