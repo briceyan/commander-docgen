@@ -1,5 +1,5 @@
 [build]
-entrypoints = ["./index.ts"]
+entrypoint = "./index.ts"
 outdir = "./dist"
 minify = true
 target = "node"
