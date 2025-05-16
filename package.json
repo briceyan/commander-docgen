@@ -1,12 +1,6 @@
 {
   "name": "commanderjs-doc",
-  "version": "0.1.2",
-  "license": "MIT",
-  "homepage": "https://github.com/briceyan/commanderjs-doc#readme",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/briceyan/commanderjs-doc.git"
-  },
+  "version": "0.1.3",
   "files": [
     "dist",
     "README.md",
@@ -30,5 +24,11 @@
   },
   "publishConfig": {
     "access": "public"
+  },
+  "license": "MIT",
+  "homepage": "https://github.com/briceyan/commanderjs-doc#readme",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/briceyan/commanderjs-doc"
   }
 }
