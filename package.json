@@ -2,10 +2,10 @@
   "name": "commanderjs-doc",
   "version": "0.1.2",
   "license": "MIT",
-  "homepage": "https://github.com/BriceYan/commanderjs-doc",
+  "homepage": "https://github.com/briceyan/commanderjs-doc#readme",
   "repository": {
     "type": "git",
-    "url": "https://github.com/BriceYan/commanderjs-doc.git"
+    "url": "https://github.com/briceyan/commanderjs-doc.git"
   },
   "files": [
     "dist",
