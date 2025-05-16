@@ -17,7 +17,7 @@ cmddoc --entry ./path/to/your/cli.js --out MANUAL.md
 Or run it directly without installing:
 
 ```bash
-bunx cmddoc --entry ./path/to/your/cli.js --out MANUAL.md
+bunx commanderjs-doc cmddoc --entry ./path/to/your/cli.js --out MANUAL.md
 ```
 
 
