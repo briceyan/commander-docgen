@@ -1,23 +1,23 @@
-# commanderjs-doc
+# commander-docgen
 
 A CLI tool to generate Markdown documentation from [Commander.js](https://github.com/tj/commander.js) programs.
 
 ## Installation
 
 ```bash
-bun a -g commanderjs-doc
+bun a -g commander-docgen
 ```
 
 ## Usage
 
 ```bash
-cmddoc --entry ./path/to/your/cli.js --out MANUAL.md
+commander-docgen --entry ./path/to/your/cli.js --out MANUAL.md
 ```
 
 Or run it directly without installing:
 
 ```bash
-bunx commanderjs-doc cmddoc --entry ./path/to/your/cli.js --out MANUAL.md
+bunx commander-docgen --entry ./path/to/your/cli.js --out MANUAL.md
 ```
 
 
@@ -52,7 +52,7 @@ export { program };
 Running:
 
 ```bash
-cmddoc --entry ./mycli.js
+commander-docgen --entry ./mycli.js
 ```
 
 Will generate a Markdown file with complete documentation for your CLI.
