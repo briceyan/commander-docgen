@@ -43,12 +43,12 @@ function genUsageSection(cmd: Command, { maxDepth = Infinity }: { maxDepth?: num
 }
 
 const cli = new Command()
-  .name("cmddoc")
-  .description("Generate Markdown docs from a commander.js program")
+  .name("commander-docgen")
+  .description("Generate docs from a commander.js program")
   .showHelpAfterError(true)
   .requiredOption("--entry <path>", "Path to module exporting `program`")
   .option("--out <path>", "Output file path", "MANUAL.md")
-  .option("--max-depth <n>", "Max subcommand depth", parseInt)
+  .option("--max-depth <num>", "Max subcommand depth", parseInt, 3)
   .version(version);
 
 async function main() {
