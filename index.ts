@@ -73,7 +73,7 @@ ${installation}
 ${usage}`;
     fs.writeFileSync(path.resolve(process.cwd(), out), doc);
     console.log(`Written to ${out}`);
-  } catch (err: any) {
+  } catch (err: any /*eslint-disable-line @typescript-eslint/no-explicit-any*/) {
     console.error(`${err.message}`);
     process.exit(1);
   }
