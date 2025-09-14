@@ -1,7 +1,7 @@
 {
   "name": "commander-docgen",
   "description": "Generate documentation from Commander.js CLI programs",
-  "version": "0.1.6",
+  "version": "0.1.7",
   "type": "module",
   "files": [
     "bin/",

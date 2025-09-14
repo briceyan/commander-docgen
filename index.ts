@@ -13,11 +13,11 @@ function genInstallSection(pkgPath: string, level = 2, title?: string): string {
 
 :::code-group
 
-\`\`\`bash bun
+\`\`\`shell [bun]
 bun a -g ${name}
 \`\`\`
 
-\`\`\`bash npm
+\`\`\`shell [npm]
 npm i -g ${name}
 \`\`\`
 
@@ -68,6 +68,8 @@ async function main() {
     const doc = `---
 title: ${program.name()}
 ---
+
+# ${program.name()}
 
 ${program.description()}
 
