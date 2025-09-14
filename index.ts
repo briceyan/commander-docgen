@@ -11,25 +11,28 @@ function genInstallSection(pkgPath: string, level = 2, title?: string): string {
 
   return `${"#".repeat(level)} ${title || "Install"}
 
-<CodeGroup>
+:::code-group
+
 \`\`\`bash bun
 bun a -g ${name}
 \`\`\`
+
 \`\`\`bash npm
 npm i -g ${name}
 \`\`\`
-</CodeGroup>
+
+:::
 `;
 }
 
 function genUsageSection(cmd: Command, { maxDepth = Infinity }: { maxDepth?: number }, depth = 0, level = 2): string {
-  const fullName = depth == 0 ? "Usage" : getFullName(cmd);
+  const fullName = getFullName(cmd);
   const desc = cmd.description();
   const helpLine = `${fullName} --help`;
   const helpText = cmd.helpInformation();
 
   const section = [
-    `${"#".repeat(level)} ${fullName}`,
+    `${"#".repeat(level)} ${depth == 0 ? "Usage" : fullName}`,
     desc,
     "```bash\n" + helpLine + "\n```",
     "```\n" + helpText.trim() + "\n```",
